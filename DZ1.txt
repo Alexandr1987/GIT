@@ -1,0 +1,350 @@
+Александр@Alex MINGW64 ~
+$ cd d:OpenServer3/OpenServer/domains/widget
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget
+$ git init
+Initialized empty Git repository in D:/OpenServer3/OpenServer/domains/widget/.git/
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git add index.html
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   index.html
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git commit -m 'create file'
+[master (root-commit) d7665f8] create file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git add index2.txt index3.txt index4.txt
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   index2.txt
+        new file:   index3.txt
+        new file:   index4.txt
+
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   index2.txt
+        new file:   index3.txt
+        new file:   index4.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index3.txt
+        modified:   index4.txt
+
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   index2.txt
+        new file:   index3.txt
+        new file:   index4.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index3.txt
+        deleted:    index4.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index5.txt
+
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git log
+commit d7665f8196856346ef0a97b384a77a1d0c3eb09e
+Author: Alexandr Ochkur <webshulz1987@gmail.com>
+Date:   Tue Feb 2 22:30:29 2016 +0200
+
+    create file
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git commit -m 'modifined files'
+[master 8afc5d5] modifined files
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index2.txt
+ create mode 100644 index3.txt
+ create mode 100644 index4.txt
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git log
+commit 8afc5d531bff9e70761fd96205f71d5f4457bb7a
+Author: Alexandr Ochkur <webshulz1987@gmail.com>
+Date:   Tue Feb 2 22:39:25 2016 +0200
+
+    modifined files
+
+commit d7665f8196856346ef0a97b384a77a1d0c3eb09e
+Author: Alexandr Ochkur <webshulz1987@gmail.com>
+Date:   Tue Feb 2 22:30:29 2016 +0200
+
+    create file
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git log --pretty=format:"%h %s" --graph
+* 8afc5d5 modifined files
+* d7665f8 create file
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git log --pretty=format:%an
+Alexandr Ochkur
+Alexandr Ochkur
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index3.txt
+        deleted:    index4.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index5.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git log
+commit 8afc5d531bff9e70761fd96205f71d5f4457bb7a
+Author: Alexandr Ochkur <webshulz1987@gmail.com>
+Date:   Tue Feb 2 22:39:25 2016 +0200
+
+    modifined files
+
+commit d7665f8196856346ef0a97b384a77a1d0c3eb09e
+Author: Alexandr Ochkur <webshulz1987@gmail.com>
+Date:   Tue Feb 2 22:30:29 2016 +0200
+
+    create file
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git log --prety=format:%an+%ad
+fatal: unrecognized argument: --prety=format:%an+%ad
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index3.txt
+        deleted:    index4.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index5.txt
+        new/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index3.txt
+        deleted:    index4.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index5.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ ls
+index.html  index2.txt  index3.txt  index5.txt  new/
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index3.txt
+        deleted:    index4.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index5.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ ls
+index.html  index2.txt  index3.txt  index5.txt  new/
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ cd new
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget/new (master)
+$ ls
+index7.txt
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget/new (master)
+$ git add inde7.txt
+fatal: pathspec 'inde7.txt' did not match any files
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget/new (master)
+$ git add index7.txt
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget/new (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   index7.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ../index3.txt
+        deleted:    ../index4.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../index5.txt
+
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget/new (master)
+$ git add index5.txt
+fatal: pathspec 'index5.txt' did not match any files
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget/new (master)
+$ git add ../index5.txt
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget/new (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   ../index5.txt
+        new file:   index7.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ../index3.txt
+        deleted:    ../index4.txt
+
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget/new (master)
+$ git commit -m 'new files'
+[master 3e8386a] new files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index5.txt
+ create mode 100644 new/index7.txt
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget/new (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ../index3.txt
+        deleted:    ../index4.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget/new (master)
+$ cd ..
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index3.txt
+        deleted:    index4.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Александр@Alex MINGW64 /d/OpenServer3/OpenServer/domains/widget (master)
+$ git log
+commit 3e8386a6f249bb26c1cb0c2d06010ff7d2ed5aec
+Author: Alexandr Ochkur <webshulz1987@gmail.com>
+Date:   Tue Feb 2 22:50:06 2016 +0200
+
+    new files
+
+commit 8afc5d531bff9e70761fd96205f71d5f4457bb7a
+Author: Alexandr Ochkur <webshulz1987@gmail.com>
+Date:   Tue Feb 2 22:39:25 2016 +0200
+
+    modifined files
+
+commit d7665f8196856346ef0a97b384a77a1d0c3eb09e
+Author: Alexandr Ochkur <webshulz1987@gmail.com>
+Date:   Tue Feb 2 22:30:29 2016 +0200
+
+    create file
+
+
+
